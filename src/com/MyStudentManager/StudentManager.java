@@ -1,7 +1,7 @@
 package com.MyStudentManager;
 
-/**
- * @author :珠代
+/*
+  @author :珠代
  * @description :
  * @create :2022-03-03 17:05:06
  */
@@ -15,11 +15,10 @@ public class StudentManager {
         //创建集合对象，用于存放学生对象
         ArrayList<Student> array = new ArrayList<>();
         //加载本地数据
-        File file = new File("Data.txt");
+        File file = new File("data.txt");
         if (file.exists() && file.length() > 0) {
             // 本地数据存在则加载数据(文件内容也不能为空)
-            ArrayList<Student> list = load();
-            array = list;
+            array = load();
         } else {
             // 如果本地不存在数据,则创建文件
             file.createNewFile();
@@ -197,6 +196,7 @@ public class StudentManager {
                         String updateSex = sc.nextLine();
                         array.get(index).setSex(updateSex);
                         System.out.println("性别修改成功");
+                        break;
                     case "4":
                         System.out.println("请输入要修改的年龄：");
                         String updateAge = sc.nextLine();
@@ -229,16 +229,16 @@ public class StudentManager {
         }
         //显示表头
         //\t与tab键作用相同
-        System.out.println("学号\t\t姓名\t性别\t年龄\t专业");
-        for (int i=0;i<array.size();i++){
-            System.out.println(array.get(i).getSid()+"\t"+array.get(i).getName()+"\t"+array.get(i).getSex()+"\t\t"+array.get(i).getAge()+"\t\t"+array.get(i).getMajor());
+        System.out.println("学号\t\t\t姓名\t\t性别\t\t年龄\t\t专业");
+        for (Student student : array) {
+            System.out.println(student.getSid() + "\t" + student.getName() + "\t" + student.getSex() + "\t\t" + student.getAge() + "\t\t" + student.getMajor());
         }
 
     }
     //判断学号是否重复
     public static boolean isUsed(ArrayList<Student> array,String sid){
-        for (int i = 0;i < array.size();i++){
-            if (array.get(i).getSid().equals(sid)){
+        for (Student student : array) {
+            if (student.getSid().equals(sid)) {
                 return true;
             }
         }
@@ -246,17 +246,43 @@ public class StudentManager {
     }
     //存储数据
     public static void store(ArrayList<Student> array) throws IOException{
-        ObjectOutputStream oos =new ObjectOutputStream(new FileOutputStream("Data.txt"));
-        oos.writeObject(array);
-        oos.flush();
-        oos.close();
+//        ObjectOutputStream oos =new ObjectOutputStream(new FileOutputStream("Data.txt"));
+//        oos.writeObject(array);
+//        oos.flush();
+//        oos.close();
+       BufferedWriter bw =new BufferedWriter(new FileWriter("data.txt"));
+       for (Student s:array){
+           StringBuilder sb=new StringBuilder();
+           sb.append(s.getSid()).append(",").append(s.getName()).append(",")
+                   .append(s.getSex()).append(",").append(s.getAge()).append(",").append(s.getMajor());
+           bw.write(sb.toString());
+           bw.newLine();
+           bw.flush();
+       }
+
+       bw.close();
     }
     //加载数据
     public static ArrayList<Student> load( ) throws IOException, ClassNotFoundException {
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Data.txt"));
-        Object obj = ois.readObject();
-        ois.close();
-        ArrayList<Student> list = (ArrayList<Student>) obj;
-        return list;
+//        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Data.txt"));
+//        Object obj = ois.readObject();
+//        ois.close();
+//        return (ArrayList<Student>) obj;
+        BufferedReader br=new BufferedReader(new FileReader("data.txt"));
+        ArrayList<Student> array =new ArrayList<>();
+        String line;
+        while ((line=br.readLine())!=null){
+            String[] str=line.split(",");
+            Student s=new Student();
+            s.setSid(str[0]);
+            s.setName(str[1]);
+            s.setSex(str[2]);
+            s.setAge(str[3]);
+            s.setMajor(str[4]);
+
+            array.add(s);
+        }
+        br.close();
+        return array;
     }
 }

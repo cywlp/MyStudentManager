@@ -20,6 +20,20 @@ public class Student implements Serializable {//实现Serializable接口序列�
     private String location;//位置
     private String length;//长度
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "sid='" + sid + '\'' +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age='" + age + '\'' +
+                ", major='" + major + '\'' +
+                '}';
+    }
+
+    public Student() {
+    }
+
     public Student(String sid, String name, String sex, String age, String major) {
         this.sid = sid;
         this.name = name;
