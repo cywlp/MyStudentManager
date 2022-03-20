@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09c934b7-17c2-4be3-bc0d-6b789e2fb162" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
+    <list default="true" id="09c934b7-17c2-4be3-bc0d-6b789e2fb162" name="Default Changelist" comment="学生管理系统">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyStudentManager/META-INF/MyStudentManager.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyStudentManager/com/MyStudentManager/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyStudentManager/com/MyStudentManager/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyStudentManager/com/MyStudentManager/StudentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyStudentManager/com/MyStudentManager/StudentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MyStudentManager/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MyStudentManager/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MyStudentManager/StudentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MyStudentManager/StudentManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/com/MyStudentManager/StudentManager.java" root0="FORCE_HIGHLIGHTING" />
@@ -92,6 +86,7 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -168,7 +163,16 @@
       <workItem from="1647583740732" duration="4370000" />
       <workItem from="1647590712615" duration="152000" />
       <workItem from="1647591051991" duration="601000" />
+      <workItem from="1647702804995" duration="2063000" />
     </task>
+    <task id="LOCAL-00001" summary="学生管理系统">
+      <created>1647703133296</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647703133296</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -207,6 +211,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="学生管理系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="学生管理系统" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/StudentManager.java" />
